@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<title>Jquery图片特效筛选插件Filterizr在线演示</title>
+
+<style>
+* { margin: 0; padding: 0;}
+ul { list-style-type: none;}
+.keyword { display: block; width: 300px; margin: 0 auto 20px; padding: 8px; border: 1px solid #ccc;}
+
+.sucaihuo { width: 1000px; margin: 0 auto; font-size: 0;}
+.filtr-item { display: inline-block; width: 230px; padding: 10px;}
+.filtr-item a { color: #444; text-decoration: none;}
+.filtr-item img { width: 100%; height: 131px;}
+.filtr-item span { display: block; margin-top: 5px; font-size: 12px; text-align: center;}
+</style>
+</head>
+
+<body>
+<h1>搜索</h1>
+
+<input class="keyword" placeholder="请输入关键字" data-search>
+
+<div class="sucaihuo">
+	<div class="filtr-item" data-category="2">
+		<a href="#">
+			<img src="img/nature_2.jpg" alt="">
+			<span class="ss">仿QQ绿钻抽奖转盘</span>
+		</a>
+	</div>
+	<div class="filtr-item" data-category="1">
+		<a href="#">
+			<img src="img/nature_1.jpg" alt="">
+			<span>jQuery筛选过滤插件Filterizr</span>
+		</a>
+	</div>
+	<div class="filtr-item" data-category="1">
+		<a href="#">
+			<img src="img/nature_3.jpg" alt="">
+			<span>jQuery全屏滚动插件DD Full Screen Slider</span>
+		</a>
+	</div>
+	
+	<div class="filtr-item" data-category="3">
+		<a href="#">
+			<img src="img/city_1.jpg" alt="">
+			<span>让IE7 IE8支持CSS3 background-size属性</span>
+		</a>
+	</div>
+	<div class="filtr-item" data-category="1">
+		<a href="#">
+			<img src="img/city_2.jpg" alt="">
+			<span>轻巧的jQuery提示框插件Tipso</span>
+		</a>
+	</div>
+	<div class="filtr-item" data-category="2">
+		<a href="#">
+			<img src="img/city_3.jpg" alt="">
+			<span>简单的jQuery幻灯片插件ck_slide</span>
+		</a>
+	</div>
+	<div class="filtr-item" data-category="1">
+		<a href="#">
+			<img src="img/industrial_3.jpg" alt="">
+			<span>WOW.js – 让页面滚动更有趣</span>
+		</a>
+	</div>
+	<div class="filtr-item" data-category="2">
+		<a href="#">
+			<img src="img/industrial_2.jpg" alt="">
+			<span>fullPage.js制作网易邮箱大师页面</span>
+		</a>
+	</div>
+	<div class="filtr-item" data-category="2">
+		<a href="#">
+			<img src="img/industrial_1.jpg" alt="">
+			<span>onepage-scroll制作iPhone 5s页面</span>
+		</a>
+	</div>
+	<div class="filtr-item" data-category="2">
+		<a href="#">
+			<img src="img/industrial_3.jpg" alt="">
+			<span>jqueryrotate制作机锋网积分抽奖效果</span>
+		</a>
+	</div>
+	<div class="filtr-item abc" data-category="2">
+		<a href="#">
+			<img src="img/industrial_3.jpg" alt="">
+			<span>jQuery左右垂直反向滚动插件multiscroll.js</span>
+		</a>
+	</div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.filterizr.js"></script>
+<script>
+$(function() {
+	$('.sucaihuo').filterizr();
+
+	$('.nav li').on('click', function() {
+		$(this).toggleClass('active').siblings().removeClass('active');
+	});
+});
+</script>
+</body>
+</html>

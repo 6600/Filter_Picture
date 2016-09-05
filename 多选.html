@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<title>Jquery图片特效筛选插件Filterizr在线演示</title>
+
+<style>
+* { margin: 0; padding: 0;}
+ul { list-style-type: none;}
+.nav { width: 1000px; margin: 0 auto 20px; text-align: center; font-size: 0;}
+.nav li { display: inline-block; margin: 0 5px; padding: 10px 20px; font-size: 14px; color: #333; background-color: #ccc; cursor: pointer;}
+.nav .active { color: #fff; background-color: #21b384;}
+.sucaihuo { width: 1000px; margin: 0 auto; font-size: 0;}
+.filtr-item { display: inline-block; width: 230px; padding: 10px;}
+.filtr-item img { width: 100%;}
+</style>
+</head>
+
+<body>
+<h1>多选</h1>
+
+<ul class="nav">
+	<li data-multifilter="1">代码</li>
+	<li data-multifilter="2">素材</li>
+	<li data-multifilter="3">模板</li>
+</ul>
+
+<div class="sucaihuo">
+	<div class="filtr-item" data-category="2">
+		<a href="#">
+			<img src="img/city_1.jpg" alt="">
+		</a>
+	</div>
+	<div class="filtr-item" data-category="1">
+		<a href="#">
+			<img src="img/city_2.jpg" alt="">
+		</a>
+	</div>
+	<div class="filtr-item" data-category="1">
+		<a href="#">
+			<img src="img/city_3.jpg" alt="">
+		</a>
+	</div>
+	
+	<div class="filtr-item" data-category="3">
+		<a href="#">
+			<img src="img/industrial_1.jpg" alt="">
+		</a>
+	</div>
+	<div class="filtr-item" data-category="1">
+		<a href="#">
+			<img src="img/industrial_2.jpg" alt="">
+		</a>
+	</div>
+	<div class="filtr-item" data-category="2">
+		<a href="#">
+			<img src="img/industrial_3.jpg" alt="">
+		</a>
+	</div>
+	<div class="filtr-item" data-category="1">
+		<a href="#">
+			<img src="img/nature_1.jpg" alt="">
+		</a>
+	</div>
+	<div class="filtr-item" data-category="2">
+		<a href="#">
+			<img src="img/nature_2.jpg" alt="">
+		</a>
+	</div>
+	<div class="filtr-item" data-category="2">
+		<a href="#">
+			<img src="img/nature_3.jpg" alt="">
+		</a>
+	</div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.filterizr.js"></script>
+<script>
+$(function() {
+	$('.sucaihuo').filterizr();
+
+	$('.nav li').on('click', function() {
+		$(this).toggleClass('active');
+	});
+});
+</script>
+</body>
+</html>
